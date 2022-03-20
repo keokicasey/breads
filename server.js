@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const express = require('express')
-// const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 
 // CONFIGURATION
 require('dotenv').config()
@@ -12,6 +12,7 @@ app.use(express.static('public'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(methodOverride('_method'))
 
 // ROUTES
 app.get('/', (req, res) => {
