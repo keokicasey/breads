@@ -3,7 +3,7 @@ const Default = require("./layouts/default");
 
 function Index({ breads }) {
   return (
-    <Default title={"title"}>
+    <Default title={title}>
       <h2>Index Page</h2>
       {breads.map((bread, index) => {
         return (
